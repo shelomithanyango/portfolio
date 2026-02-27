@@ -1,11 +1,11 @@
-import { AlignCenter } from 'lucide-react';
+import { Github, Linkedin, MessageSquare, Mail, Terminal, Database, Code2 } from 'lucide-react';
 import React from 'react';
 
 export default function App() {
   return (
-    <div className="bg-slate-950 text-white min-h-screen font-sans">
+    <div className="bg-slate-950 text-white min-h-screen font-sans selection:bg-blue-500/30">
       {/* --- NAVIGATION --- */}
-      <nav className="flex items-center justify-between p-4 shadow-md border-b border-white/5 backdrop-blur-sm sticky top-0 z-50 bg-slate-950/80">
+      <nav className="flex items-center justify-between p-4 shadow-md border-b border-white/5 backdrop-blur-md sticky top-0 z-50 bg-slate-950/80">
         <h4 className="text-2xl font-extrabold tracking-tight">
           <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Shelomith Anyango
@@ -19,9 +19,12 @@ export default function App() {
           <li><a href="#contact" className='hover:text-[#FFD700] transition-colors'>Get In Touch</a></li>
         </ul>
         <div>
-          <button className='px-5 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-blue-200 to-purple-200 text-slate-900 hover:shadow-[0_0_20px_rgba(255,215,0,0.3)] transition-all'>
-            <a href="#contact">Lets Connect</a>
-          </button>
+          <a 
+            href="#contact" 
+            className="inline-block px-5 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-blue-200 to-purple-200 text-slate-900 hover:shadow-[0_0_20px_rgba(255,215,0,0.3)] transition-all cursor-pointer"
+          >
+            Lets Connect
+          </a>
         </div>
       </nav>
 
@@ -42,16 +45,9 @@ export default function App() {
             </h1>
             
             <h3 className="text-2xl font-medium text-slate-400">Software Developer</h3>
-
             <p className="text-lg text-slate-400 max-w-lg leading-relaxed">
               I find interest in building efficient software systems, solving real-world problems using technology, and continuously improving my programming skills.
             </p>
-
-            <div className="flex gap-4 pt-4">
-              <button className="flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-blue-200 to-purple-200 text-slate-900 font-bold hover:shadow-[0_0_20px_rgba(255,215,0,0.3)] transition-all"><a href="#contact">Let’s get started</a>
-                 <span className="text-xl">›</span>
-              </button>
-            </div>
 
             <div className="flex gap-10 pt-10 border-t border-slate-800">
                 <div><span className="block text-2xl font-bold text-white">12+</span><span className="text-xs uppercase tracking-widest text-slate-500">Months of Exp.</span></div>
@@ -114,7 +110,6 @@ export default function App() {
           </div>
         </section>
 
-
         {/* --- RECENT WORK SECTION --- */}
         <section id="projects" className="py-24 px-6 max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -130,11 +125,11 @@ export default function App() {
                 <h3 className="text-2xl font-bold text-blue-400 mb-3">First Aid Chatbot</h3>
                 <p className="text-sm text-slate-400 mb-6">Built with <strong>Gemini API</strong> and <strong>Django</strong>.</p>
                 <div className="flex flex-wrap justify-center gap-2 mb-8">
-                  {['Django', 'Gemini AI', 'html,js&css'].map((tech) => (
+                  {['Django', 'Gemini AI', 'HTML/JS/CSS'].map((tech) => (
                     <span key={tech} className="px-2 py-1 text-[10px] rounded-md border border-slate-700 text-slate-400">{tech}</span>
                   ))}
                 </div>
-                <a href="#" className="mt-auto text-[#FFD700] font-bold hover:gap-3 transition-all">View Project →</a>
+                <a href="#" className="mt-auto text-[#FFD700] font-bold hover:gap-3 transition-all inline-flex items-center gap-2">View Project <span>→</span></a>
               </div>
             </article>
 
@@ -155,11 +150,9 @@ export default function App() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Languages & Frameworks */}
               <div className="p-8 rounded-3xl bg-slate-900/50 border border-white/5 hover:border-blue-500/30 transition-all group">
                 <h3 className="text-xl font-bold text-blue-400 mb-6 flex items-center gap-2">
-                  <span className="p-2 rounded-lg bg-blue-400/10 text-blue-400">⚡</span>
-                  Development
+                  <Code2 size={20} /> Development
                 </h3>
                 <ul className="space-y-3">
                   {['Python', 'Java', 'JavaScript', 'Django', 'React', 'Tailwind CSS'].map((item) => (
@@ -171,11 +164,9 @@ export default function App() {
                 </ul>
               </div>
 
-              {/* Tools & Environment */}
               <div className="p-8 rounded-3xl bg-slate-900/50 border border-white/5 hover:border-purple-500/30 transition-all group">
                 <h3 className="text-xl font-bold text-purple-400 mb-6 flex items-center gap-2">
-                  <span className="p-2 rounded-lg bg-purple-400/10 text-purple-400">🛠️</span>
-                  Tools & OS
+                  <Terminal size={20} /> Tools & OS
                 </h3>
                 <ul className="space-y-3 text-slate-300">
                   <li>Git & GitHub / Bitbucket</li>
@@ -185,11 +176,9 @@ export default function App() {
                 </ul>
               </div>
 
-              {/* Database & Web */}
               <div className="p-8 rounded-3xl bg-slate-900/50 border border-white/5 hover:border-yellow-500/30 transition-all group">
                 <h3 className="text-xl font-bold text-yellow-400 mb-6 flex items-center gap-2">
-                  <span className="p-2 rounded-lg bg-yellow-400/10 text-yellow-400">💾</span>
-                  Backend & Data
+                  <Database size={20} /> Backend & Data
                 </h3>
                 <ul className="space-y-3 text-slate-300">
                   <li>SQL Fundamentals</li>
@@ -205,8 +194,6 @@ export default function App() {
         {/* --- CONTACT SECTION --- */}
         <section id="contact" className="py-24 px-6 md:px-20 bg-slate-900/30">
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">
-            
-            {/* Contact Info */}
             <div className="lg:w-1/3 space-y-8">
               <div>
                 <h2 className="text-4xl font-bold text-white mb-4">Get In Touch</h2>
@@ -217,7 +204,7 @@ export default function App() {
 
               <div className="space-y-6">
                 <a href="mailto:shelomithanyango@gmail.com" className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
-                  <div className="text-blue-400 group-hover:scale-110 transition-transform">✉️</div>
+                  <Mail className="text-blue-400 group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-xs text-slate-500 uppercase font-bold">Email Me</p>
                     <p className="text-slate-200">shelomithanyango@gmail.com</p>
@@ -225,42 +212,48 @@ export default function App() {
                 </a>
 
                 <div className="flex gap-4">
-                  {['LinkedIn', 'GitHub', 'WhatsApp'].map((platform) => (
-                    <a key={platform} href="#" className="flex-1 py-3 text-center rounded-xl bg-slate-800 text-sm font-semibold hover:bg-blue-500 transition-colors">
-                      {platform}
+                  {[
+                    { name: 'LinkedIn', url: 'https://linkedin.com/in/shelomith-anyango', icon: <Linkedin size={18}/> },
+                    { name: 'GitHub', url: 'https://github.com/shelomithanyango', icon: <Github size={18}/> },
+                    { name: 'WhatsApp', url: 'https://wa.me/254741080548', icon: <MessageSquare size={18}/> } 
+                  ].map((platform) => (
+                    <a 
+                      key={platform.name} 
+                      href={platform.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="flex-1 py-3 flex items-center justify-center gap-2 rounded-xl bg-slate-800 text-sm font-semibold hover:bg-blue-500 transition-all text-white"
+                    >
+                      {platform.icon}
                     </a>
                   ))}
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
             <div className="lg:w-2/3">
               <form className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8 rounded-3xl bg-slate-900 border border-white/10 shadow-2xl">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-300">Name</label>
-                  <input type="text" placeholder="Your Name" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-blue-500 transition-colors" />
+                  <input type="text" placeholder="Your Name" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-300">Email</label>
-                  <input type="email" placeholder="email@example.com" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-blue-500 transition-colors" />
+                  <input type="email" placeholder="email@example.com" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all" />
                 </div>
                 <div className="space-y-2 md:col-span-2">
                   <label className="text-sm font-medium text-slate-300">Message</label>
-                  <textarea rows="4" placeholder="How can I help you?" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
+                  <textarea rows="4" placeholder="How can I help you?" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all resize-none"></textarea>
                 </div>
-                <button type="submit" className="md:col-span-2 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold hover:opacity-90 transition-opacity">
+                <button type="submit" className="md:col-span-2 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold hover:brightness-110 active:scale-95 transition-all">
                   Send Message
                 </button>
               </form>
             </div>
-
           </div>
         </section>
-
       </main>
 
-      {/* --- FOOTER --- */}
       <footer className="py-10 text-center border-t border-white/5">
         <p className="text-slate-500">© 2026 Shelomith Anyango. All rights reserved.</p>
       </footer>
