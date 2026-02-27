@@ -80,21 +80,22 @@ export default function App() {
         
         {/* --- ABOUT ME SECTION --- */}
 
-<section id="about" className="py-24 border-t border-white/5 px-6 md:px-12 px-90">
+<section id="about" className="py-24 border-b border-white/5 px-6 md:px-12 lg:px-20 backdrop-blur-sm">
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
     
     {/* To the left :my Story */}
     <div className="md:w-1/2 space-y-8">
       {/* Label Badge */}
-      <div className="space-y-3">
+      <div className="space-y-3 text-center">
          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-semibold text-blue-400">
               <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
               Get to Know Me
             </div>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
+        
+        <h4 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
           Creating <span className="text-blue-400">Solutions</span> <br /> 
           with Precision.
-        </h2>
+        </h4>
       </div>
 
       {/* Bio Paragraphs */}
@@ -160,7 +161,7 @@ export default function App() {
 </section>
 
         {/* --- RECENT WORK SECTION --- */}
-        <section>
+        <section className='py-20'>
           <div>Recent Work</div>
           <h2>Recent work</h2>
           <div>
