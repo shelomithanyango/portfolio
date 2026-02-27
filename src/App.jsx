@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function App() {
   return (
-    <div className="bg-gradient-to-r bg-slate-950">
+    <div className="bg-gradient-to-r bg-slate-950 ">
       {/* --- NAVIGATION --- */}
       <nav className="flex items-center justify-between p-4 shadow-md border-b border-white/5 backdrop-blur-sm">
      <h4 className="text-2xl font-extrabold tracking-tight">
@@ -19,7 +19,7 @@ export default function App() {
         </ul>
         {/* Social handles placeholders */}
         <div>
-          <button className='px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-blue-500 to-purple-300  hover:scale-105 transition-transform'><a href="#contact">Lets Connect</a></button>
+          <button className='px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-blue-200 to-purple-200 text-slate-900 font-bold hover:shadow-[0_0_20px_rgba(255,215,0,0.3)] transition-all'><a href="#contact">Lets Connect</a></button>
         </div>
       <div>
           <span>color toggle</span>
@@ -58,7 +58,7 @@ export default function App() {
 
             {/* Stats Row */}
             <div className="flex gap-10 pt-10 border-t border-slate-800">
-                <div><span className="block text-2xl font-bold text-white">2+</span><span className="text-xs uppercase tracking-widest text-slate-500">Years Exp.</span></div>
+                <div><span className="block text-2xl font-bold text-white">12+</span><span className="text-xs uppercase tracking-widest text-slate-500">Months of Exp.</span></div>
                 <div><span className="block text-2xl font-bold text-white">5+</span><span className="text-xs uppercase tracking-widest text-slate-500">Projects</span></div>
                 <div><span className="block text-2xl font-bold text-white">24/7</span><span className="text-xs uppercase tracking-widest text-slate-500">Support</span></div>
             </div>
@@ -78,66 +78,84 @@ export default function App() {
           </div>
         </section>
         
-        {/* --- ABOUT SECTION --- */}
- <section id="about" className="px-6 md:px-12 lg:px-20 py-20 border-b border-white/10">
-  <div className="max-w-6xl mx-auto  ">
-{/* about section badge */}
-    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-semibold text-blue-400 mb-6">
-              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-              Get to know me
-            </div>
+        {/* --- ABOUT ME SECTION --- */}
+
+<section id="about" className="py-24 border-t border-white/5 px-6 md:px-12 px-90">
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
     
-    {/* Section Title */}
-    <div className="text-center mb-16">
-      <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-        About Me
-      </h2>
-      <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+    {/* To the left :my Story */}
+    <div className="md:w-1/2 space-y-8">
+      {/* Label Badge */}
+      <div className="space-y-3">
+         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-semibold text-blue-400">
+              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+              Get to Know Me
+            </div>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
+          Creating <span className="text-blue-400">Solutions</span> <br /> 
+          with Precision.
+        </h2>
+      </div>
+
+      {/* Bio Paragraphs */}
+      <div className="space-y-5 text-lg text-slate-400 leading-relaxed font-monstrate">
+        <p>
+          I am a Software Developer with a passion for building functional and 
+          user-centric applications. My journey in technology is driven by a 
+          curiosity for how things work and a desire to create tools that make 
+          life easier for others.
+        </p>
+        <p>
+          With a background in <span className="text-blue-400 font-medium border-b border-indigo-500/50">Python, Java, and Web Technologies</span>, 
+          I specialize in bridging the gap between complex backend logic and 
+          intuitive frontend designs.
+        </p>
+      </div>
+
+      {/* Quick Interests Chips */}
+      <div className="flex flex-wrap gap-3 pt-4">
+        <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-300">Linux Ubuntu Enthusiast</span>
+        <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-300">Database Architecture</span>
+        
+      </div>
     </div>
 
-    {/* Content Grid */}
-    <div className="grid md:grid-cols-2 gap-12 items-center">
+    {/* for the right side */}
+    <div className="md:w-1/2 w-full relative">
+      {/* Background Decorative Blur */}
+      <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-600/20 blur-[100px] rounded-full"></div>
 
-      {/* Left Side */}
-      <div>
-        <h3 className="text-2xl font-semibold text-white mb-6">
-          My Journey
-        </h3>
-
-        <p className="text-slate-400 leading-relaxed mb-6 text-larger">
-          I'm a dedicated software developer
-          with a passion for creating efficient and scalable solutions. My journey began with curiosity 
-          about how systems work, which led me into programming and software development.
-        </p>
-
-        <p className="text-slate-400 leading-relaxed mb-6 text-slate-400">
-          With over two years of experience, I've worked on diverse projects ranging 
-          from web applications to database systems. I enjoy solving complex problems 
-          and building impactful digital solutions.
-        </p>
-
-        <div className="mt-6">
-          <span className="inline-block bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm">
-            📍 Bungoma, Kenya
-          </span>
+      {/* Stats Card Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        {/* Stat 1: Experience */}
+        <div className="p-6 rounded-2xl bg-slate-900/40 border border-white/10 backdrop-blur-md hover:border-blue-400/50 transition-colors">
+          <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 mb-4">
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h4 className="text-2xl font-bold text-white">12+ Months</h4>
+          <p className="text-xs text-slate-500 uppercase tracking-widest mt-1">Learning & Dev</p>
         </div>
+
+        {/* Stat 2: Projects */}
+        <div className="p-6 rounded-2xl bg-slate-900/40 border border-white/10 backdrop-blur-md hover:border-[#FFD700]/50 transition-colors">
+          <div className="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center text-[#FFD700] mb-4">
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+          </div>
+          <h4 className="text-2xl font-bold text-white">2+ Projects</h4>
+          <p className="text-xs text-slate-500 uppercase tracking-widest mt-1">Completed</p>
+        </div>
+
+        {/* Large Highlight Box */}
+        <div className="sm:col-span-2 p-6 rounded-2xl bg-gradient-to-br from-indigo-900/20 to-transparent border border-white/5">
+          <p className="text-slate-300 italic">
+            "I thrive in environments that challenge me to learn new frameworks and solve intricate problems that bridge technology and human needs."
+          </p>
+        </div>
+
       </div>
-
-      {/* Right Side */}
-      <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-md border border-white/10">
-        <h4 className="text-xl font-semibold text-white mb-6">
-          Core Skills
-        </h4>
-
-        <ul className="space-y-4 text-slate-300">
-          <li> React & Tailwind CSS</li>
-          <li> Django & REST APIs</li>
-          <li> Database Design & Optimization</li>
-          <li> Git & Version Control</li>
-        </ul>
-      </div>
-
     </div>
+
   </div>
 </section>
 
