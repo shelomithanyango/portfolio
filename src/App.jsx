@@ -55,8 +55,63 @@ export default function App() {
           </div>
         </section>
 
+        {/* --- ABOUT ME SECTION --- */}
+<section id="about">
+  {/* Small label/badge */}
+  <div>
+    <span>About Me</span>
+  </div>
+
+  <h2>Transforming Ideas into Reality Through Code</h2>
+  
+  <div>
+    {/* Left Side: Professional Bio */}
+    <div>
+      <p>
+        I am a Software Developer with a passion for building functional and 
+        user-centric applications. My journey in technology is driven by a 
+        curiosity for how things work and a desire to create tools that make 
+        life easier for others.
+      </p>
+      <p>
+        With a background in Python, Java, and Web Technologies, I specialize in 
+        bridging the gap between complex backend logic and intuitive frontend 
+        designs. I thrive in environments that challenge me to learn new 
+        frameworks and solve intricate problems.
+      </p>
+    </div>
+
+    {/* Right Side: Stats (Inspired by your screenshot) */}
+    <div>
+      <div>
+        <strong>2+</strong>
+        <span>Years of Learning & Building</span>
+      </div>
+      <div>
+        <strong>2+</strong>
+        <span>Projects Completed</span>
+      </div>
+      <div>
+        <strong>5+</strong>
+        <span>Technologies Mastered</span>
+      </div>
+    </div>
+  </div>
+
+  {/*  Personal interests/philosophy */}
+  <div>
+    <p>When I'm not coding, you can find me exploring Ubuntu terminal tricks, 
+    studying database architecture, or contributing to open-source discussions.</p>
+  </div>
+  {/* Right Side: The Image (This will sit sideways to the text) */}
+    <div>
+      <img src="your-image-url.jpg" alt="Shelomith Anyango Portrait" />
+    </div>
+</section>
+
         {/* --- RECENT WORK SECTION --- */}
         <section>
+          <div>Recent Work</div>
           <h2>Recent work</h2>
           <div>
             <article>
