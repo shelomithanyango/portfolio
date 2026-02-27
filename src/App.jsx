@@ -8,7 +8,7 @@ export default function App() {
         <h1>Shelomith Anyango</h1>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">About Me</a></li>
           <li><a href="#projects">Recent work</a></li>
           <li><a href="#technologies">Technologies</a></li>
            <li><a href="#contact">Get In Touch</a></li>
@@ -191,7 +191,7 @@ export default function App() {
             <h3>Quick Links</h3>
             <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Recent work</a></li>
             <li><a href="#technologies">Technologies</a></li>
              <li><a href="#contact">Get In Touch</a></li>
