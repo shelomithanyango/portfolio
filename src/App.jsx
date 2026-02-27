@@ -2,26 +2,28 @@ import React from 'react';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="bg-gradient-to-r bg-slate-950">
       {/* --- NAVIGATION --- */}
-      <nav>
-        <h1>Shelomith Anyango</h1>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">Recent work</a></li>
-          <li><a href="#technologies">Technologies</a></li>
+      <nav className="flex items-center justify-between p-4 shadow-md border-b border-white/5 backdrop-blur-sm">
+     <h4 className="text-2xl font-extrabold tracking-tight">
+  <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+    Shelomith Anyango
+  </span>
+</h4>
+        <ul className="hidden md:flex items-center gap-10 text-sm font-larger">
+          <li><a href="#home" className='hover:text-[#FFD700] transition-colors'>Home</a></li>
+          <li><a href="#about" className='hover:text-[#FFD700] transition-colors'>About Me</a></li>
+          <li><a href="#projects" className='hover:text-[#FFD700] transition-colors'>Recent work</a></li>
+          <li><a href="#technologies" className='hover:text-[#FFD700] transition-colors'>Technologies</a></li>
            <li><a href="#contact">Get In Touch</a></li>
         </ul>
         {/* Social handles placeholders */}
         <div>
-          <span>LinkedIn</span>
-          <span>Github</span>
-          <span>Twitter</span>
+          <button className='px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-blue-500 to-purple-300  hover:scale-105 transition-transform'><a href="#contact">Lets Connect</a></button>
         </div>
-        <div>
-          <span>color toggle</span>
-        </div>
+      <div>
+          <span>color toggle</span>
+       </div>   
       </nav>
 
       <main>
