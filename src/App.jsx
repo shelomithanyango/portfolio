@@ -7,11 +7,11 @@ export default function App() {
       <nav>
         <h1>Shelomith Anyango</h1>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Recent work</li>
-          <li>Technologies</li>
-          <li>Get In Touch</li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Recent work</a></li>
+          <li><a href="#technologies">Technologies</a></li>
+           <li><a href="#contact">Get In Touch</a></li>
         </ul>
         {/* Social handles placeholders */}
         <div>
@@ -135,10 +135,11 @@ export default function App() {
           <div>
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="#about">About Me</a></li>
-              <li><a href="#recent-work">Recent Work</a></li>
-              <li><a href="#technologies">Technologies</a></li>
-              <li><a href="#contact">Get in Touch</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Recent work</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+             <li><a href="#contact">Get In Touch</a></li>
             </ul>
           </div>
 
