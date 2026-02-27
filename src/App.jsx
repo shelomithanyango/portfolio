@@ -48,8 +48,8 @@ export default function App() {
             </p>
 
             <div className="flex gap-4 pt-4">
-              <button className="flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-blue-200 to-purple-200 text-slate-900 font-bold hover:shadow-[0_0_20px_rgba(255,215,0,0.3)] transition-all">
-                Let’s get started <span className="text-xl">›</span>
+              <button className="flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-blue-200 to-purple-200 text-slate-900 font-bold hover:shadow-[0_0_20px_rgba(255,215,0,0.3)] transition-all"><a href="#contact">Let’s get started</a>
+                 <span className="text-xl">›</span>
               </button>
             </div>
 
