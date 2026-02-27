@@ -43,7 +43,7 @@ export default function App() {
               </span>
             </h1>
             
-            <h3 className="text-2xl font-medium text-slate-400 font-monsrate">Software Developer </h3>
+            <h3 className="text-2xl font-medium text-slate-400 font-monstrate">Software Developer </h3>
 
             <p className="text-lg text-slate-400 max-w-lg leading-relaxed">
               I find interest in building efficient software systems, solving real-world problems using technology, and continuously improving my programming skills.
@@ -78,6 +78,68 @@ export default function App() {
           </div>
         </section>
         
+        {/* --- ABOUT SECTION --- */}
+ <section id="about" className="px-6 md:px-12 lg:px-20 py-20 border-b border-white/10">
+  <div className="max-w-6xl mx-auto  ">
+{/* about section badge */}
+    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-semibold text-blue-400 mb-6">
+              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+              Get to know me
+            </div>
+    
+    {/* Section Title */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        About Me
+      </h2>
+      <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+    </div>
+
+    {/* Content Grid */}
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+
+      {/* Left Side */}
+      <div>
+        <h3 className="text-2xl font-semibold text-white mb-6">
+          My Journey
+        </h3>
+
+        <p className="text-slate-400 leading-relaxed mb-6 text-larger">
+          I'm a dedicated software developer
+          with a passion for creating efficient and scalable solutions. My journey began with curiosity 
+          about how systems work, which led me into programming and software development.
+        </p>
+
+        <p className="text-slate-400 leading-relaxed mb-6 text-slate-400">
+          With over two years of experience, I've worked on diverse projects ranging 
+          from web applications to database systems. I enjoy solving complex problems 
+          and building impactful digital solutions.
+        </p>
+
+        <div className="mt-6">
+          <span className="inline-block bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm">
+            📍 Bungoma, Kenya
+          </span>
+        </div>
+      </div>
+
+      {/* Right Side */}
+      <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-md border border-white/10">
+        <h4 className="text-xl font-semibold text-white mb-6">
+          Core Skills
+        </h4>
+
+        <ul className="space-y-4 text-slate-300">
+          <li> React & Tailwind CSS</li>
+          <li> Django & REST APIs</li>
+          <li> Database Design & Optimization</li>
+          <li> Git & Version Control</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
 
         {/* --- RECENT WORK SECTION --- */}
         <section>
