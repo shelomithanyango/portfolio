@@ -2,111 +2,121 @@ import React from 'react';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="bg-gradient-to-r bg-slate-950">
       {/* --- NAVIGATION --- */}
-      <nav>
-        <h1>Shelomith Anyango</h1>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">Recent work</a></li>
-          <li><a href="#technologies">Technologies</a></li>
+      <nav className="flex items-center justify-between p-4 shadow-md border-b border-white/5 backdrop-blur-sm">
+     <h4 className="text-2xl font-extrabold tracking-tight">
+  <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+    Shelomith Anyango
+  </span>
+</h4>
+        <ul className="hidden md:flex items-center gap-10 text-sm font-larger">
+          <li><a href="#home" className='hover:text-[#FFD700] transition-colors'>Home</a></li>
+          <li><a href="#about" className='hover:text-[#FFD700] transition-colors'>About Me</a></li>
+          <li><a href="#projects" className='hover:text-[#FFD700] transition-colors'>Recent work</a></li>
+          <li><a href="#technologies" className='hover:text-[#FFD700] transition-colors'>Technologies</a></li>
            <li><a href="#contact">Get In Touch</a></li>
         </ul>
         {/* Social handles placeholders */}
         <div>
-          <span>LinkedIn</span>
-          <span>Github</span>
-          <span>Twitter</span>
+          <button className='px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-blue-500 to-purple-300  hover:scale-105 transition-transform'><a href="#contact">Lets Connect</a></button>
         </div>
-        <div>
-          <span>color toggle</span>
-        </div>
+      <div>
+          <span>color toggle</span>
+       </div>   
       </nav>
 
       <main>
         {/* --- HERO SECTION --- */}
-        <section>
-          <div>
-            {/* badge */}
-            <span>Crafting Digital Experiences Through Code</span>
-            <h1>Hi, I'm Shelomith Anyango</h1>
-            <h3>A software developer</h3>
-
-            <p>
-              I find interest in building efficient software systems, 
-              with a strong focus on writing clean, maintainable code
-              solving real-world problems using technology 
-              and continuously improving my programming skills.
-            </p>
-            <div>
-              <button>
-                Let’s get started <span>›</span>
-              </button>
-              <button>View CV</button>
+        <section id="home" className="flex flex-col md:flex-row items-center justify-between px-90 py-20 gap-10 border -b border-white/5 backdrop-blur-sm">
+          <div className="md:w-1/2 space-y-6">
+            {/* Status Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-semibold text-blue-400">
+              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+              Available for New Projects
             </div>
 
-        
+            <h1 className="text-6xl md:text-7xl font-bold text-white leading-tight">
+              Hi, I'm <br />
+              <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-200 bg-clip-text text-transparent">
+                Shelomith Anyango
+              </span>
+            </h1>
+            
+            <h3 className="text-2xl font-medium text-slate-400 font-monstrate">Software Developer </h3>
+
+            <p className="text-lg text-slate-400 max-w-lg leading-relaxed">
+              I find interest in building efficient software systems, solving real-world problems using technology, and continuously improving my programming skills.
+            </p>
+
+            <div className="flex gap-4 pt-4">
+              <button className="flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-blue-200 to-purple-200 text-slate-900 font-bold hover:shadow-[0_0_20px_rgba(255,215,0,0.3)] transition-all">
+                Let’s get started <span className="text-xl">›</span>
+              </button>
+              
+            </div>
+
+            {/* Stats Row */}
+            <div className="flex gap-10 pt-10 border-t border-slate-800">
+                <div><span className="block text-2xl font-bold text-white">2+</span><span className="text-xs uppercase tracking-widest text-slate-500">Years Exp.</span></div>
+                <div><span className="block text-2xl font-bold text-white">5+</span><span className="text-xs uppercase tracking-widest text-slate-500">Projects</span></div>
+                <div><span className="block text-2xl font-bold text-white">24/7</span><span className="text-xs uppercase tracking-widest text-slate-500">Support</span></div>
+            </div>
           </div>
 
-          {/* My Image Placeholder */}
-          <div>
-            <img src="your-image-url.jpg" alt="Profile Portrait" />
+          {/* Profile Image with Gradient Border */}
+          <div className="md:w-1/2 flex justify-center">
+            <div className="relative p-[2px] rounded-3xl bg-gradient-to-b from-yellow-400 via-indigo-500 to-purple-600 shadow-2xl">
+                <div className="bg-[#0B0E14] rounded-[22px] overflow-hidden">
+                    <img 
+                        src="your-image-url.jpg" 
+                        alt="Shelomith" 
+                        className="w-80 h-96 object-cover opacity-90 hover:opacity-100 transition-opacity"
+                    />
+                </div>
+            </div>
           </div>
         </section>
-
-        {/* --- ABOUT ME SECTION --- */}
-<section id="about">
-  {/* Small label/badge */}
+        
+        {/* --- ABOUT SECTION --- */}
+  <section id="about">
   <div>
-    <span>About Me</span>
-  </div>
-
-  <h2>Transforming Ideas into Reality Through Code</h2>
-  
-  <div>
-    {/* Left Side: Professional Bio */}
     <div>
-      <p>
-        I am a Software Developer with a passion for building functional and 
-        user-centric applications. My journey in technology is driven by a 
-        curiosity for how things work and a desire to create tools that make 
-        life easier for others.
-      </p>
-      <p>
-        With a background in Python, Java, and Web Technologies, I specialize in 
-        bridging the gap between complex backend logic and intuitive frontend 
-        designs. I thrive in environments that challenge me to learn new 
-        frameworks and solve intricate problems.
-      </p>
+      <h2>About Me</h2>
+      <div></div>
     </div>
 
-    {/* Right Side: Stats (Inspired by your screenshot) */}
     <div>
       <div>
-        <strong>2+</strong>
-        <span>Years of Learning & Building</span>
+        <h3>My Journey</h3>
+        <p>
+          I'm a dedicated software developer based in Bungoma with a passion for creating efficient 
+          and scalable solutions. My journey began with a curiosity about how things work, which led 
+          me to explore programming and eventually pursue a career in software development.
+        </p>
+        <p>
+          With over two years of experience, I've had the opportunity to work on diverse projects,
+          from web applications to database systems. I enjoy tackling complex challenges and finding
+          innovative solutions.
+        </p>
+
+        <p>
+          <strong>Location:</strong> Bungoma
+        </p>
       </div>
+
       <div>
-        <strong>2+</strong>
-        <span>Projects Completed</span>
-      </div>
-      <div>
-        <strong>5+</strong>
-        <span>Technologies Mastered</span>
+        <h4>Core Skills</h4>
+        <ul>
+          <li>React</li>
+          <li>Django</li>
+          <li>REST APIs</li>
+          <li>Database Design</li>
+          <li>Git & GitHub</li>
+        </ul>
       </div>
     </div>
   </div>
-
-  {/*  Personal interests/philosophy */}
-  <div>
-    <p>When I'm not coding, you can find me exploring Ubuntu terminal tricks, 
-    studying database architecture, or contributing to open-source discussions.</p>
-  </div>
-  {/* Right Side: The Image (This will sit sideways to the text) */}
-    <div>
-      <img src="your-image-url.jpg" alt="Shelomith Anyango Portrait" />
-    </div>
 </section>
 
         {/* --- RECENT WORK SECTION --- */}
