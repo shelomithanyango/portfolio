@@ -217,6 +217,25 @@ export default function App() {
               Feel free to reach out for collaboration, questions, or professional networking.
             </p>
           </div>
+          <div>
+            <h3>Send Me a Message</h3>
+            <p>Use the contact form or email me directly.</p>
+            <form >
+              <div>
+                <label>Name:</label>
+                <input type="text" placeholder='Your Name' />
+              </div>
+              <div>
+                <label >Email:</label>
+                <input type="email" placeholder='Your Email' />
+              </div>
+              <div>
+                <label>Message:</label>
+               <textarea placeholder="Tell me about your project..."></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
         </section>
       </main>
 
