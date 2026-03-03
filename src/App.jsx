@@ -4,7 +4,8 @@ import profile from "./assets/profile.jpeg";
 
 export default function App() {
   return (
-    <div className="bg-slate-950 text-white min-h-screen font-sans selection:bg-blue-500/30">
+    <div className="w-screen overflow-x-hidden bg-slate-950 text-white min-h-screen font-sans selection:bg-blue-500/30 ">
+      
       {/* --- NAVIGATION --- */}
       <nav className="flex items-center justify-between p-4 shadow-md border-b border-white/5 backdrop-blur-md sticky top-0 z-50 bg-slate-950/80">
         <h4 className="text-2xl font-extrabold tracking-tight">
@@ -28,6 +29,8 @@ export default function App() {
           </a>
         </div>
       </nav>
+      {/* --- Center all items --- */}
+      <div className='max-w-6xl mx-auto px-6 flex flex-col items-center'>
 
       <main>
         {/* --- HERO SECTION --- */}
@@ -47,19 +50,19 @@ export default function App() {
             
             <h3 className="text-2xl font-medium text-slate-400">Software Developer</h3>
             <p className="text-lg text-slate-400 max-w-lg leading-relaxed">
-              I find interest in building efficient software systems, solving real-world problems using technology, and continuously improving my programming skills.
+              I find interest in building efficient software systems, solving real-world problems using technology and continuously improving my programming skills.
             </p>
 
             <div className="flex gap-10 pt-10 border-t border-slate-800">
                 <div><span className="block text-2xl font-bold text-white">12+</span><span className="text-xs uppercase tracking-widest text-slate-500">Months of Exp.</span></div>
-                <div><span className="block text-2xl font-bold text-white">5+</span><span className="text-xs uppercase tracking-widest text-slate-500">Projects</span></div>
+                <div><span className="block text-2xl font-bold text-white">2+</span><span className="text-xs uppercase tracking-widest text-slate-500">Projects</span></div>
                 <div><span className="block text-2xl font-bold text-white">24/7</span><span className="text-xs uppercase tracking-widest text-slate-500">Support</span></div>
             </div>
           </div>
 
           <div className="md:w-1/2 flex justify-center">
-            <div className="relative p-[2px] rounded-3xl bg-gradient-to-b from-yellow-400 via-indigo-500 to-purple-600 shadow-2xl">
-                <div className="bg-[#0B0E14] rounded-[22px] overflow-hidden">
+            <div className="relative p-[2px] rounded-3xl bg-gradient-to-b from-blue-400 via-indigo-500 to-purple-600 shadow-2xl">
+                <div className="bg-[#0B0E14] rounded-[40px] overflow-hidden">
                     <img 
                         src={profile} 
                         alt="Shelomith" 
@@ -71,50 +74,58 @@ export default function App() {
         </section>
         
         {/* --- ABOUT ME SECTION --- */}
-        <section id="about" className="py-24 border-b border-white/5 px-6 md:px-12 lg:px-20">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
-            <div className="md:w-1/2 space-y-8">
-              <div className="space-y-3">
-                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-semibold text-blue-400">
-                      <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-                      Get to Know Me
-                 </div>
-                <h4 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
-                  Creating <span className="text-blue-400">Solutions</span> <br /> 
-                  with Precision.
-                </h4>
-              </div>
+        <section id="about" className="py-24 bg-slate-950 shadow-md border-b border-white/5">
+  <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-5 gap-16 items-center">
+    
+    {/* Left Side: Story (Takes up 3 out of 5 columns) */}
+    <div className="md:col-span-3 space-y-6">
+      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-semibold text-blue-400">
+        <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+        My Story
+      </div>
+      
+      <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+        Creating <span className="text-blue-400">Solutions</span> <br /> 
+        with Precision.
+      </h2>
 
-              <div className="space-y-5 text-lg text-slate-400 leading-relaxed">
-                <p>I am a Software Developer with a passion for building functional and user-centric applications.</p>
-                <p>With a background in <span className="text-blue-400 font-medium border-b border-indigo-500/50">Python, Java, and Web Technologies</span>, I specialize in bridging the gap between complex logic and intuitive design.</p>
-              </div>
+      <div className="space-y-4 text-slate-400 text-lg leading-relaxed">
+        <p>
+          I am a  Software Developer who is driven by a strong motivation to build 
+          functional, efficient, and user-centric applications.
+        </p>
+        <p>
+          With a solid background in <span className="text-white font-medium">Python, Java, and Web Technologies</span>, 
+          I focus on transforming complex ideas into practical digital solutions.
+        </p>
+      </div>
 
-              <div className="flex flex-wrap gap-3 pt-4">
-                <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-300">Linux Ubuntu Enthusiast</span>
-                <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-300">Database Architecture</span>
-              </div>
-            </div>
+      <div className="flex flex-wrap gap-3 pt-4">
+        <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-300">Linux Ubuntu Enthusiast</span>
+        <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-300">Database Architecture</span>
+      </div>
+    </div>
 
-            <div className="md:w-1/2 w-full relative">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-6 rounded-2xl bg-slate-900/40 border border-white/10 backdrop-blur-md">
-                  <h4 className="text-2xl font-bold text-white">12+ Months</h4>
-                  <p className="text-xs text-slate-500 uppercase tracking-widest mt-1">Learning & Dev</p>
-                </div>
-                <div className="p-6 rounded-2xl bg-slate-900/40 border border-white/10 backdrop-blur-md">
-                  <h4 className="text-2xl font-bold text-white">2+ Projects</h4>
-                  <p className="text-xs text-slate-500 uppercase tracking-widest mt-1">Completed</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+    {/* Right Side: Stats (Takes up 2 out of 5 columns) */}
+    <div className="md:col-span-2 grid grid-cols-1 gap-4">
+      <div className="p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 border border-white/10 hover:border-blue-500/50 transition-colors group">
+        <h4 className="text-4xl font-bold text-white group-hover:text-blue-400 transition-colors">12+ Months</h4>
+        <p className="text-sm text-slate-500 uppercase tracking-widest mt-2">Learning & Development</p>
+      </div>
+
+      <div className="p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 border border-white/10 hover:border-purple-500/50 transition-colors group">
+        <h4 className="text-4xl font-bold text-white group-hover:text-purple-400 transition-colors">5+ Projects</h4>
+        <p className="text-sm text-slate-500 uppercase tracking-widest mt-2">Successfully Completed</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
         {/* --- RECENT WORK SECTION --- */}
         <section id="projects" className="py-24 px-6 max-w-6xl mx-auto border-b border-white/5">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-black mb-4 text-white">Recent Work</h2>
+            <h2 className="text-4xl md:text-6xl font-black mb-4 text-white">My Recent Work</h2>
             <div className="h-1.5 w-24 bg-indigo-500 mx-auto rounded-full"></div>
           </div>
 
@@ -143,7 +154,7 @@ export default function App() {
         </section>
 
         {/* --- TECHNOLOGIES SECTION --- */}
-        <section id="technologies" className="py-24 px-6 md:px-20 bg-slate-950">
+        <section id="technologies" className="py-24 px-6 md:px-20 bg-slate-950 shadow-md border-b border-white/5">
           <div className="max-w-6xl mx-auto">
             <div className="mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Technologies I Use</h2>
@@ -193,13 +204,13 @@ export default function App() {
         </section>
 
         {/* --- CONTACT SECTION --- */}
-        <section id="contact" className="py-24 px-6 md:px-20 bg-slate-900/30">
+        <section id="contact" className="py-24 px-6 md:px-20 bg-slate-900/30 shadow-md border-b border-white/5">
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">
             <div className="lg:w-1/3 space-y-8">
               <div>
                 <h2 className="text-4xl font-bold text-white mb-4">Get In Touch</h2>
                 <p className="text-slate-400 leading-relaxed">
-                  I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+                 Whether you have a question or just want to say hi, I’ll try my best to get back to you!
                 </p>
               </div>
 
@@ -254,10 +265,11 @@ export default function App() {
           </div>
         </section>
       </main>
-
+</div>
       <footer className="py-10 text-center border-t border-white/5">
         <p className="text-slate-500">© 2026 Shelomith Anyango. All rights reserved.</p>
       </footer>
+
     </div>
   );
 }
