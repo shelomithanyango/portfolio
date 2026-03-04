@@ -9,9 +9,16 @@ export default function Contact () {
       const handleSendMessage = (e) => {
         e.preventDefault();
         setIsSending(true);
+
+        console.log(import.meta.env.VITE_SERVICE_ID);
+console.log(import.meta.env.VITE_TEMPLATE_ID);
+console.log(import.meta.env.VITE_USER_ID);
     
        
-        emailjs.sendForm('service_qie1zvi', 'template_89iifvn', form.current, '1hNTlf-zDSsq5hkJn')
+        emailjs.sendForm( import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_USER_ID)
           .then(() => {
             alert("Message sent to Shelomith! ");
             setIsSending(false);
