@@ -1,8 +1,31 @@
+import React, { useState, useRef } from 'react';
 import { Github, Linkedin, MessageSquare, Mail, Terminal, Database, Code2 } from 'lucide-react';
-import React from 'react';
+import emailjs from '@emailjs/browser';
 import profile from "./assets/profile.jpeg";
 
 export default function App() {
+ 
+  const form = useRef();
+  const [isSending, setIsSending] = useState(false);
+
+  const handleSendMessage = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+
+   
+    emailjs.sendForm('service_qie1zvi', 'template_89iifvn', form.current, '1hNTlf-zDSsq5hkJn')
+      .then(() => {
+        alert("Message sent to Shelomith! ");
+        setIsSending(false);
+        e.target.reset(); 
+      }, (error) => {
+        console.log(error.text);
+        alert("Oops! Something went wrong.");
+        setIsSending(false);
+      });
+  };
+
+ 
   return (
     <div className="w-screen overflow-x-hidden bg-slate-950 text-white min-h-screen font-sans selection:bg-blue-500/30 ">
       
@@ -13,7 +36,7 @@ export default function App() {
             Shelomith Anyango
           </span>
         </h4>
-        <ul className="hidden md:flex items-center gap-10 text-sm font-medium">
+        <ul className="hidden md:flex items-center gap-10 text-sm font-medium ">
           <li><a href="#home" className='hover:text-[#FFD700] transition-colors'>Home</a></li>
           <li><a href="#about" className='hover:text-[#FFD700] transition-colors'>About Me</a></li>
           <li><a href="#projects" className='hover:text-[#FFD700] transition-colors'>Recent work</a></li>
@@ -135,7 +158,7 @@ export default function App() {
               <div className="relative h-full p-8 rounded-[22px] flex flex-col items-center text-center bg-slate-900">
                 <span className="mb-4 px-3 py-1 text-xs font-semibold tracking-wider text-indigo-400 uppercase bg-indigo-400/10 rounded-full border border-indigo-400/20">Featured Project</span>
                 <h3 className="text-2xl font-bold text-blue-400 mb-3">First Aid Chatbot</h3>
-                <p className="text-sm text-slate-400 mb-6">Built with <strong>Gemini API</strong> and <strong>Django</strong>.</p>
+                <p className="text-sm text-slate-400 mb-6">Built with <strong>Gemini API</strong> and <strong>Django</strong>.It also demonstrates USSD usage from Africas talking</p>
                 <div className="flex flex-wrap justify-center gap-2 mb-8">
                   {['Django', 'Gemini AI', 'HTML/JS/CSS'].map((tech) => (
                     <span key={tech} className="px-2 py-1 text-[10px] rounded-md border border-slate-700 text-slate-400">{tech}</span>
@@ -244,23 +267,49 @@ export default function App() {
             </div>
 
             <div className="lg:w-2/3">
-              <form className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8 rounded-3xl bg-slate-900 border border-white/10 shadow-2xl">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-slate-300">Name</label>
-                  <input type="text" placeholder="Your Name" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-slate-300">Email</label>
-                  <input type="email" placeholder="email@example.com" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all" />
-                </div>
-                <div className="space-y-2 md:col-span-2">
-                  <label className="text-sm font-medium text-slate-300">Message</label>
-                  <textarea rows="4" placeholder="How can I help you?" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all resize-none"></textarea>
-                </div>
-                <button type="submit" className="md:col-span-2 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold hover:brightness-110 active:scale-95 transition-all">
-                  Send Message
-                </button>
-              </form>
+            <form ref={form} onSubmit={handleSendMessage} className="space-y-4">
+  <div className="grid grid-cols-2 gap-4">
+    <div className="space-y-2">
+      <label className="text-sm font-medium">Name</label>
+      <input 
+        name="from_name" 
+        type="text" 
+        placeholder="Your Name" 
+        className="w-full p-3 bg-slate-900 border border-white/10 rounded-lg outline-none focus:border-blue-500" 
+        required 
+      />
+    </div>
+    <div className="space-y-2">
+      <label className="text-sm font-medium">Email</label>
+      <input 
+        name="reply_to" 
+        type="email" 
+        placeholder="email@example.com" 
+        className="w-full p-3 bg-slate-900 border border-white/10 rounded-lg outline-none focus:border-blue-500" 
+        required 
+      />
+    </div>
+  </div>
+
+  <div className="space-y-2">
+    <label className="text-sm font-medium">Message</label>
+    <textarea 
+      name="message" 
+      placeholder="How can I help you?" 
+      rows="4" 
+      className="w-full p-3 bg-slate-900 border border-white/10 rounded-lg outline-none focus:border-blue-500" 
+      required
+    ></textarea>
+  </div>
+
+  <button 
+    type="submit" 
+    disabled={isSending}
+    className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-bold hover:opacity-90 transition-opacity"
+  >
+    {isSending ? "Sending..." : "Send Message"}
+  </button>
+</form>
             </div>
           </div>
         </section>
