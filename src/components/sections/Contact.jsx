@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Github, Linkedin, MessageSquare, Mail } from 'lucide-react';
+import { Github, Linkedin, Instagram, Mail } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 export default function Contact () {
@@ -51,9 +51,9 @@ console.log(import.meta.env.VITE_USER_ID);
 
                 <div className="flex gap-4">
                   {[
-                    { name: 'LinkedIn', url: 'https://linkedin.com/in/shelomith-anyango', icon: <Linkedin size={18}/> },
+                    { name: 'LinkedIn', url: 'https://linkedin.com/in/shelomith-anyango-34888a334', icon: <Linkedin size={18}/> },
                     { name: 'GitHub', url: 'https://github.com/shelomithanyango', icon: <Github size={18}/> },
-                    { name: 'WhatsApp', url: 'https://wa.me/254741080548', icon: <MessageSquare size={18}/> } 
+                    { name: 'Instagram', url: 'https://instagram.com/ciel.o5005', icon: <Instagram size={18}/> } 
                   ].map((platform) => (
                     <a 
                       key={platform.name} 
