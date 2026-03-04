@@ -164,7 +164,7 @@ export default function App() {
                     <span key={tech} className="px-2 py-1 text-[10px] rounded-md border border-slate-700 text-slate-400">{tech}</span>
                   ))}
                 </div>
-                <a href="#" className="mt-auto text-[#FFD700] font-bold hover:gap-3 transition-all inline-flex items-center gap-2">View Project <span>→</span></a>
+                <a href="https://faidchatbot.onrender.com " className="mt-auto text-[#FFD700] font-bold hover:gap-3 transition-all inline-flex items-center gap-2">View Project <span>→</span></a>
               </div>
             </article>
 
