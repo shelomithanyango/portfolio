@@ -45,7 +45,7 @@ console.log(import.meta.env.VITE_USER_ID);
                   <Mail className="text-blue-400 group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-xs text-slate-500 uppercase font-bold">Email Me</p>
-                    <p className="text-slate-200">shelomithanyango@gmail.com</p>
+                    <p className="text-slate-200">shelomith42@gmail.com@gmail.com</p>
                   </div>
                 </a>
 

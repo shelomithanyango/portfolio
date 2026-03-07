@@ -2,7 +2,7 @@ Portfolio Website — Brief Documentation
 
 ## Overview
 
-This is a modern personal portfolio website built using **React** and **Tailwind CSS**. The portfolio is designed to showcase skills, projects, technologies, and contact information using a dark-themed, responsive user interface.
+This is a modern personal portfolio website built using **React** and **Tailwind CSS**. The portfolio is designed to showcase skills, projects, technologies and contact information using a dark-themed, responsive user interface.
 
 ## Project Purpose
 
@@ -104,7 +104,7 @@ Contact form fields:
 1. Clone repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/shelomithanyango/portfolio.git
 cd portfolio
 ```
 
@@ -148,18 +148,18 @@ src/
 * Adjust Tailwind styling
 
 ## Future Improvements
-n
+
 * More project showcases
 * Animation enhancements
 * Accessibility optimization
 
 ## Deployment
 
-The portfolio can be deployed using:
+The portfolio has been deployed using:
 
+* Render
 * Vercel
-* Netlify
-* GitHub Pages
+
 
 ## License
 
@@ -167,14 +167,9 @@ This portfolio is personal work for learning and professional presentation.
 
 
 
- feat/core-layout-clean
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
 
 
