@@ -4,7 +4,7 @@ import React from "react";
         return (
 
    
-      <nav className="flex items-center justify-center gap-30 p-4 shadow-md border-b border-white/5 backdrop-blur-md sticky top-0 z-50 bg-slate-950/80">
+     <nav className="fixed top-0 left-0 w-full z-[100] flex items-center justify-center gap-30 p-4 shadow-md border-b border-white/5 backdrop-blur-md bg-slate-950/80">
         <h4 className="text-2xl font-extrabold tracking-tight">
           <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Shelomith Anyango

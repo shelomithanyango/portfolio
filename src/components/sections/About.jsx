@@ -38,12 +38,12 @@ export default function About() {
     {/* Right Side: Stats (Takes up 2 out of 5 columns) */}
     <div className="md:col-span-2 grid grid-cols-1 gap-4">
       <div className="p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 border border-white/10 hover:border-blue-500/50 transition-colors group">
-        <h4 className="text-4xl font-bold text-white group-hover:text-blue-400 transition-colors">12+ Months</h4>
+        <h4 className="text-4xl font-bold text-white group-hover:text-blue-400 transition-colors">6+ Months</h4>
         <p className="text-sm text-slate-500 uppercase tracking-widest mt-2">Learning & Development</p>
       </div>
 
       <div className="p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 border border-white/10 hover:border-purple-500/50 transition-colors group">
-        <h4 className="text-4xl font-bold text-white group-hover:text-purple-400 transition-colors">5+ Projects</h4>
+        <h4 className="text-4xl font-bold text-white group-hover:text-purple-400 transition-colors">2+ Projects</h4>
         <p className="text-sm text-slate-500 uppercase tracking-widest mt-2">Successfully Completed</p>
       </div>
     </div>

@@ -1,6 +1,4 @@
 import React, { useState, useRef } from 'react';
-
-
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
@@ -12,8 +10,6 @@ import Contact from './components/sections/Contact';
 export default function App() {
  
 
-
- 
   return (
     <div className="w-screen overflow-x-hidden bg-slate-950 text-white min-h-screen font-sans selection:bg-blue-500/30 ">
        <Navbar />
